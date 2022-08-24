@@ -2,7 +2,7 @@ import { unstable_getServerSession } from 'next-auth';
 import Head from 'next/head';
 import { Container } from 'react-bootstrap';
 import { fetchApi } from '../../utils/api';
-import { authOptions } from '../api/auth/[...nextAuth]';
+import { authOptions } from '../api/auth/[...nextauth]';
 
 export async function getServerSideProps({ req, res, params }) {
   const session = await unstable_getServerSession(req, res, authOptions);
